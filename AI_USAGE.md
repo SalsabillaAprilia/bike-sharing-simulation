@@ -6,9 +6,8 @@
 - Bantuan merumuskan model simulasi dan memilih dataset publik.
 - Pembuatan draf awal struktur repositori, kode Python, README, dan template report dalam percakapan ChatGPT.
 
-Karena kode awal dan dokumen proyek ini dibuat dengan bantuan AI, **jangan langsung menyatakan bahwa kontribusi AI di bawah 20%**. Persentase harus dihitung dengan metode yang dijelaskan dosen. Mengetik ulang kode yang dihasilkan AI tidak otomatis menjadikannya karya yang ditulis sendiri.
 
-## Log aktivitas mahasiswa — lengkapi sesuai kenyataan
+## Log aktivitas mahasiswa
 
 | Tanggal/waktu | Aktivitas yang benar-benar dilakukan | Bukti |
 |---|---|---|
