@@ -1,0 +1,10 @@
+{
+  "jumlah_simulasi": 1000,
+  "jumlah_hari_per_simulasi": 30,
+  "rata_rata_total": 135815.199,
+  "median_total": 135653.5,
+  "persentil_5": 130630.5,
+  "persentil_95": 141332.0,
+  "simpangan_baku_total": 3365.3959546137107,
+  "random_seed": 42
+}

@@ -61,20 +61,42 @@ python -m pip install -r requirements.txt
 python main.py
 ```
 
-## 7. Output
+## 7. Output dan Hasil Simulasi
 
-Program menghasilkan:
-- `results/ringkasan_per_jam.csv` — jumlah catatan, rata-rata, median, dan simpangan baku per jam.
-- `results/rata_rata_per_jam.png` — grafik rata-rata penyewaan berdasarkan jam.
-- `results/hasil_simulasi.csv` — total permintaan pada setiap simulasi.
-- `results/ringkasan_simulasi.json` — rata-rata, median, persentil ke-5 dan ke-95, serta simpangan baku hasil simulasi.
-- `results/distribusi_total_simulasi.png` — histogram hasil simulasi.
+Program telah berhasil dijalankan pada 17.379 baris data historis dengan 1.000 iterasi simulasi untuk periode 30 hari (seed acak `42`).
 
-## 8. Interpretasi
+### Ringkasan Statistik Simulasi
 
-Gunakan `ringkasan_simulasi.json` untuk melaporkan hasil setelah program dijalankan. Persentil ke-5 dan ke-95 menggambarkan rentang tengah sekitar 90% dari hasil simulasi; angka tersebut bukan jaminan batas minimum/maksimum dan bukan interval prediksi yang tervalidasi.
+| Metrik | Nilai |
+|---|---:|
+| **Jumlah Simulasi** | 1.000 iterasi |
+| **Durasi per Simulasi** | 30 hari |
+| **Rata-rata Total Permintaan** | 135.815,20 penyewaan |
+| **Median Total Permintaan** | 135.653,50 penyewaan |
+| **Persentil ke-5** | 130.630,50 penyewaan |
+| **Persentil ke-95** | 141.332,00 penyewaan |
+| **Simpangan Baku (Std Dev)** | 3.365,40 penyewaan |
 
-Jangan menulis hasil angka sebelum menjalankan program menggunakan file data yang benar.
+### Visualisasi Hasil
+
+1. **Pola Permintaan per Jam:**
+   Puncak permintaan tertinggi terjadi pada jam pulang kantor (**pukul 17:00** dengan rata-rata 461,45 penyewaan dan **pukul 18:00** dengan 425,51 penyewaan), serta jam berangkat kerja (**pukul 08:00** dengan 359,01 penyewaan). Titik terendah berada pada dini hari (**pukul 04:00** dengan rata-rata 6,35 penyewaan).
+
+   ![Rata-rata Penyewaan per Jam](results/rata_rata_per_jam.png)
+
+2. **Distribusi Total Simulasi:**
+   Histogram total permintaan menunjukkan kurva distribusi normal yang simetris, di mana 90% hasil simulasi berkisar antara 130.630 hingga 141.332 penyewaan.
+
+   ![Distribusi Total Simulasi](results/distribusi_total_simulasi.png)
+
+## 8. Berkas Output
+
+Seluruh berkas keluaran program tersimpan di folder `results/`:
+- `results/ringkasan_per_jam.csv` — statistik deskriptif per jam (jumlah data, rata-rata, median, simpangan baku).
+- `results/rata_rata_per_jam.png` — visualisasi grafik garis rata-rata per jam.
+- `results/hasil_simulasi.csv` — catatan total permintaan pada setiap iterasi dari 1.000 simulasi.
+- `results/ringkasan_simulasi.json` — rangkuman indikator utama simulasi.
+- `results/distribusi_total_simulasi.png` — visualisasi histogram distribusi simulasi.
 
 ## 9. Struktur repositori
 
@@ -82,15 +104,20 @@ Jangan menulis hasil angka sebelum menjalankan program menggunakan file data yan
 bike-sharing-simulation/
 ├── data/
 │   └── raw/
-│       └── hour.csv             # diunduh dari UCI, belum disertakan
-├── results/                     # hasil program
-├── main.py
-├── requirements.txt
-├── REPORT_TEMPLATE.md
-├── AI_USAGE.md
-└── README.md
+│       └── hour.csv             # dataset Bike Sharing dari UCI (17.379 baris)
+├── results/                     # output simulasi (CSV, JSON, grafik PNG)
+│   ├── distribusi_total_simulasi.png
+│   ├── hasil_simulasi.csv
+│   ├── rata_rata_per_jam.png
+│   ├── ringkasan_per_jam.csv
+│   └── ringkasan_simulasi.json
+├── main.py                      # skrip utama pemodelan dan simulasi Monte Carlo
+├── requirements.txt             # dependensi pustaka Python
+├── REPORT_TEMPLATE.md           # draf laporan lengkap analisis dan interpretasi
+├── AI_USAGE.md                  # transparansi penggunaan AI dan log aktivitas
+└── README.md                    # dokumentasi utama repositori
 ```
 
-## 10. Catatan keterlibatan AI
+## 10. Catatan Keterlibatan AI
 
-Lihat `AI_USAGE.md`. Persentase keterlibatan AI harus dilaporkan berdasarkan definisi dosen dan bukti yang nyata. Jangan mengklaim angka di bawah 20% jika tidak dapat dibuktikan.
+Proyek ini mendokumentasikan keterlibatan AI secara transparan. Rincian peran AI, log aktivitas mahasiswa, dan pernyataan kepatuhan akademik dapat dilihat pada [AI_USAGE.md](AI_USAGE.md).

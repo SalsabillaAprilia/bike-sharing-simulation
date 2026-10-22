@@ -1,7 +1,5 @@
 # Report: Simulasi Monte Carlo Permintaan Penyewaan Sepeda
 
-> **Penting:** Lengkapi bagian hasil setelah mengunduh dataset, menjalankan program, dan memeriksa output. Jangan mengisi angka berdasarkan perkiraan.
-
 ## 1. Pendahuluan
 
 Layanan penyewaan sepeda perlu memahami perubahan permintaan dari waktu ke waktu. Permintaan dapat berbeda pada setiap jam, sehingga satu nilai rata-rata saja tidak cukup untuk menggambarkan ketidakpastian. Proyek ini menggunakan data historis untuk membuat model sederhana dan menjalankan simulasi berulang guna mengamati variasi total penyewaan selama 30 hari.
@@ -29,10 +27,10 @@ Metode pengambilan sampel dengan pengembalian ini disebut *empirical bootstrap*.
 
 ### 5.1 Pola permintaan per jam
 
-Masukkan gambar `results/rata_rata_per_jam.png`.
+![Rata-rata Penyewaan per Jam](results/rata_rata_per_jam.png)
 
 **Temuan utama dari grafik:**  
-[Tulis jam dengan rata-rata tertinggi dan terendah berdasarkan `results/ringkasan_per_jam.csv`. Jangan menebak; baca nilai pada file hasil.]
+Berdasarkan file ringkasan_per_jam.csv, permintaan penyewaan tertinggi terjadi pada jam pulang kantor yaitu pukul 17:00 (rata-rata 461,45 penyewaan) dan pukul 18:00 (rata-rata 425,51 penyewaan), serta jam berangkat kerja pada pukul 08:00 (rata-rata 359,01 penyewaan). Sebaliknya, permintaan paling rendah terjadi pada dini hari, dengan titik terendah pada pukul 04:00 (rata-rata 6,35 penyewaan).
 
 ### 5.2 Hasil simulasi
 
@@ -42,16 +40,16 @@ Berdasarkan `results/ringkasan_simulasi.json`, isi tabel berikut.
 |---|---:|
 | Jumlah simulasi | 1.000 |
 | Lama setiap simulasi | 30 hari |
-| Rata-rata total permintaan | [isi hasil program] |
-| Median total permintaan | [isi hasil program] |
-| Persentil ke-5 | [isi hasil program] |
-| Persentil ke-95 | [isi hasil program] |
-| Simpangan baku | [isi hasil program] |
+| Rata-rata total permintaan | 135.815,20 |
+| Median total permintaan | 135.653,50 |
+| Persentil ke-5 | 130.630,50 |
+| Persentil ke-95 | 141.332,00 |
+| Simpangan baku | 3.365,40 |
 
-Masukkan gambar `results/distribusi_total_simulasi.png`.
+![Distribusi Total Simulasi](results/distribusi_total_simulasi.png)
 
 **Interpretasi:**  
-[Jelaskan pusat distribusi dan rentang variasi. Terangkan bahwa persentil ke-5 hingga ke-95 menunjukkan rentang tengah sekitar 90% hasil simulasi, bukan jaminan hasil di masa depan.]
+Distribusi hasil simulasi 1.000 kali berpusat di sekitar rata-rata 135.815 sepeda dengan bentuk kurva menyerupai lonceng (distribusi normal). Sekitar 90% hasil simulasi berada pada rentang tengah antara 130.630 (persentil ke-5) hingga 141.332 (persentil ke-95). Nilai simpangan baku sebesar 3.365 mencerminkan rentang variasi ketidakpastian yang wajar terjadi jika pola penyewaan historis per jam berulang selama periode 30 hari.
 
 ## 6. Keterbatasan
 
@@ -59,7 +57,7 @@ Model mengambil sampel berdasarkan jam dan tidak mempertahankan hubungan antarja
 
 ## 7. Kesimpulan
 
-[Tulis 2–4 kalimat berdasarkan output yang benar-benar dihasilkan. Ringkas pola per jam, variasi total simulasi, dan satu keterbatasan utama.]
+Simulasi Monte Carlo dengan metode empirical bootstrap berhasil memodelkan ketidakpastian permintaan penyewaan sepeda selama 30 hari dengan rata-rata total permintaan 135.815 sepeda dan rentang 90% tengah di kisaran 130.630–141.332 unit. Permintaan sangat dipengaruhi oleh waktu dalam sehari, dengan lonjakan tajam pada jam sibuk (08:00 dan 17:00–18:00). Keterbatasan model ini adalah belum memperhitungkan interaksi faktor cuaca, musim, dan hari libur secara bersamaan.
 
 ## Daftar pustaka
 

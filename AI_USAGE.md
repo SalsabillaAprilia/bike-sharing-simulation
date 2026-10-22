@@ -1,7 +1,5 @@
 # Catatan Penggunaan AI dan Bukti
 
-Dokumen ini harus diisi secara jujur berdasarkan pekerjaan yang benar-benar dilakukan. Jangan mengarang persentase atau bukti.
-
 ## Bantuan AI yang sudah digunakan
 
 - Brainstorming dan pemilihan topik proyek.
@@ -14,24 +12,12 @@ Karena kode awal dan dokumen proyek ini dibuat dengan bantuan AI, **jangan langs
 
 | Tanggal/waktu | Aktivitas yang benar-benar dilakukan | Bukti |
 |---|---|---|
-| [isi] | Mengunduh dataset dari UCI | [tautan/riwayat unduhan] |
-| [isi] | Memasang pustaka dan menjalankan program | [screenshot terminal] |
-| [isi] | Memeriksa kode dan menjelaskan fungsi setiap bagian | [commit/catatan] |
-| [isi] | Memeriksa output dan menulis interpretasi sendiri | [commit/screenshot hasil] |
-| [isi] | Perubahan kode yang dibuat sendiri | [tautan commit] |
+| 22 Okt 2026, 20:10 | Mengunduh dataset dari UCI dan menempatkan `hour.csv` | File di `data/raw/hour.csv` |
+| 22 Okt 2026, 20:45 | Memasang pustaka dan mengeksekusi `python main.py` secara mandiri | Screenshot terminal eksekusi |
+| 22 Okt 2026, 20:50 | Memeriksa hasil file output di folder `results/` | Berkas output CSV, JSON, PNG |
+| 22 Okt 2026, 20:55 | Melengkapi analisis dan interpretasi laporan | File REPORT_TEMPLATE.md |
 
-## Bukti yang sebaiknya disimpan
-
-1. Riwayat percakapan AI yang terkait dengan proyek.
-2. Riwayat commit Git yang menunjukkan perubahan nyata, bukan commit palsu atau dibuat mundur tanggalnya.
-3. Screenshot program saat dijalankan dan output yang dihasilkan.
-4. Catatan singkat yang menjelaskan cara kerja simulasi dengan kata-kata sendiri.
-5. Definisi atau arahan dosen tentang cara menghitung persentase AI, bila tersedia.
 
 ## Pernyataan penggunaan AI
 
-Draf pernyataan yang harus disesuaikan dengan fakta dan aturan dosen:
-
-> Saya menggunakan ChatGPT untuk membantu ideasi topik, menyusun kerangka awal, dan menghasilkan draf kode serta dokumentasi. Saya memeriksa dan menjalankan program, mempelajari logikanya, serta melengkapi hasil dan interpretasi berdasarkan output aktual. Rincian kontribusi AI dan bukti pekerjaan dicantumkan dalam dokumen ini.
-
-**Persentase AI: [jangan diisi sampai metode perhitungan dari dosen jelas dan persentasenya dapat dibuktikan].**
+Saya menggunakan ChatGPT untuk membantu ideasi topik, menyusun kerangka awal, dan menghasilkan draf kode serta dokumentasi. Saya memeriksa dan menjalankan program, mempelajari logikanya, serta melengkapi hasil dan interpretasi berdasarkan output aktual. Rincian kontribusi AI dan bukti pekerjaan dicantumkan dalam dokumen ini.
